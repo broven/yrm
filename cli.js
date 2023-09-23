@@ -7,6 +7,7 @@ var ini = require('ini');
 var echo = require('node-echo');
 var extend = require('extend');
 var open = require('open');
+var shelljs = require('shelljs');
 var async = require('async');
 var request = require('request');
 var only = require('only');
@@ -126,11 +127,20 @@ function onUse(name) {
                 ]);
             })
         });
+        // 同时切换pnpm
+        if (shelljs.which('pnpm')) {
+            shelljs.exec('pnpm config set registry "' + registry.registry + '"');
+            var  newR = shelljs.exec('pnpm config get registry').stdout;
+            printMsg([
+                '', '   Pnpm Registry has been set to: ' + newR, ''
+            ]);
+        }
     } else {
         printMsg([
             '', '   Not find registry: ' + name, ''
         ]);
     }
+
 }
 
 function onDel(name) {

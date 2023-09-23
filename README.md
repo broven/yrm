@@ -3,6 +3,7 @@ yrm -- YARN registry manager
 
 [![NPM version][npm-image]][npm-url]
 
+support client: `npm`, `pnpm`, `yarn`
 `yrm` can help you easy and fast switch between different npm registries,
 now include: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`, `yarn`.
 

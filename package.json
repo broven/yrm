@@ -1,5 +1,5 @@
 {
-  "name": "yrm",
+  "name": "@randynpm/yrm",
   "version": "1.0.5",
   "description": "NPM registry manager can help you easy and fast switch between different npm registries, now include: cnpm, taobao, nj(nodejitsu), rednpm, edunpm",
   "bin": {
@@ -19,7 +19,7 @@
   "author": "i5ting",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/i5ting/yrm/issues"
+    "url": "https://github.com/broven/yrm/issues"
   },
   "homepage": "https://github.com/i5ting/yrm",
   "dependencies": {
@@ -31,6 +31,7 @@
     "npm": "^3.10.3",
     "only": "0.0.2",
     "open": "0.0.5",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "shelljs": "^0.8.5"
   }
 }
